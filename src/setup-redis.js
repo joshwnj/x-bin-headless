@@ -1,8 +1,9 @@
 // @flow
 
-const redis = require('redis')
+import redis from 'redis'
+import type { Env } from './env'
 
-module.exports = function (env) {
+export default function (env: Env) {
   const client = redis.createClient(
     env.REDIS_PORT,
     env.REDIS_HOST

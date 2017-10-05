@@ -1,8 +1,9 @@
+import getEnv from './env'
+
 const bodyParser = require('body-parser')
 const express = require('express')
 const session = require('express-session')
 const RedisStore = require('connect-redis')(session)
-const getEnv = require('./env')
 const setupRedis = require('./setup-redis')
 
 const env = getEnv(process.env)
